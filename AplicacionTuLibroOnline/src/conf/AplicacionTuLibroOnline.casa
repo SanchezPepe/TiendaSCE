@@ -36,6 +36,7 @@
                 </port>
             </ports>
         </binding-component-service-unit>
+    
     <service-engine-service-unit artifacts-zip="ServiciosVenta.jar" component-name="sun-bpel-engine" defined="false" description="some description" internal="true" name="ServiciosVenta" unit-name="ServiciosVenta" unknown="false" x="-1" y="-1"/>
     </service-units>
     <connections>
