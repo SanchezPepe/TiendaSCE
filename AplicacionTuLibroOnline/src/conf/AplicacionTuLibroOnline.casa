@@ -11,12 +11,7 @@
         <endpoint display-name="ServicioMensajeria" endpoint-name="EnvioPaquetesRole_partnerRole" file-path="serviciosVenta.bpel" interface-name="ns3:EnvioPaquetes" name="endpoint8" process-name="serviciosVenta" service-name="ns5:ServicioMensajeria"/>
     </endpoints>
     <service-units>
-        <service-engine-service-unit artifacts-zip="ServiciosVenta.jar" component-name="sun-bpel-engine" defined="true" description="Represents this Service Unit" internal="true" name="AplicacionTuLibroOnline-ServiciosVenta" unit-name="ServiciosVenta" unknown="false" x="145" y="99">
-            <provides endpoint="endpoint5"/>
-            <consumes endpoint="endpoint6"/>
-            <consumes endpoint="endpoint7"/>
-            <consumes endpoint="endpoint8"/>
-        </service-engine-service-unit>
+        
         <binding-component-service-unit artifacts-zip="sun-http-binding.jar" component-name="sun-http-binding" description="Represents this Service Unit" name="AplicacionTuLibroOnline-sun-http-binding" unit-name="sun-http-binding">
             <ports>
                 <port x="67" y="276">
@@ -41,6 +36,7 @@
                 </port>
             </ports>
         </binding-component-service-unit>
+    <service-engine-service-unit artifacts-zip="ServiciosVenta.jar" component-name="sun-bpel-engine" defined="false" description="some description" internal="true" name="ServiciosVenta" unit-name="ServiciosVenta" unknown="false" x="-1" y="-1"/>
     </service-units>
     <connections>
         <connection consumer="endpoint6" provider="endpoint1" state="unchanged"/>
