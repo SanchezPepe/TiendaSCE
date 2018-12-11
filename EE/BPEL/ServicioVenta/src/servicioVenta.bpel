@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process
+    name="servicioVenta"
+    targetNamespace="http://enterprise.netbeans.org/bpel/ServicioVenta/servicioVenta"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/ServicioVenta/servicioVenta"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2"
+    xmlns:sxat="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Attachment"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling">
+    <import namespace="http://j2ee.netbeans.org/wsdl/ServicioVenta/DescriptorBPEL/VentaWSDL" location="DescriptorBPEL/VentaWSDL.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://enterprise.netbeans.org/bpel/ManufacturerWSWrapper" location="ManufacturerWSWrapper.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://web/" location="http://localhost:8080/NewsApp-war/ManufacturerWS?WSDL" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://enterprise.netbeans.org/bpel/ProductCodeWSWrapper" location="ProductCodeWSWrapper.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://web/" location="http://localhost:8080/NewsApp-war/ProductCodeWS?WSDL" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="Fabricante" xmlns:tns="http://enterprise.netbeans.org/bpel/ManufacturerWSWrapper" partnerLinkType="tns:ManufacturerWSLinkType" partnerRole="ManufacturerWSRole"/>
+        <partnerLink name="CodigoProds" xmlns:tns="http://enterprise.netbeans.org/bpel/ProductCodeWSWrapper" partnerLinkType="tns:ProductCodeWSLinkType" partnerRole="ProductCodeWSRole"/>
+        <partnerLink name="VentaProductos" xmlns:tns="http://j2ee.netbeans.org/wsdl/ServicioVenta/DescriptorBPEL/VentaWSDL" partnerLinkType="tns:VentaWSDL" myRole="VentaWSDLPortTypeRole"/>
+    </partnerLinks>
+    <sequence>
+   </sequence>
+</process>

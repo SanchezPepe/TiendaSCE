@@ -65,16 +65,8 @@ public class TstServices {
         lista.forEach((objProd) -> {
             System.out.println("Producto: + " + objProd.getDescription());
         });
-        
-        
-        
-        
+           
         System.out.println("PARTE 4.5 ====================================");
-        
-        
- 
-        
-        
 
     }
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <nextCatalog catalog="nbproject/private/retriever/catalog.xml"/>
+    <system systemId="http://localhost:8080/NewsApp-war/ManufacturerWS?WSDL" uri="src/Fabricante/localhost_8080/NewsApp-war/ManufacturerWS.wsdl"/>
+    <system systemId="http://localhost:8080/NewsApp-war/ManufacturerWS?xsd=1" uri="src/Fabricante/localhost_8080/NewsApp-war/ManufacturerWS.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/NewsApp-war/ProductCodeWS?WSDL" uri="src/Productos/localhost_8080/NewsApp-war/ProductCodeWS.wsdl"/>
+    <system systemId="http://localhost:8080/NewsApp-war/ProductCodeWS?xsd=1" uri="src/Productos/localhost_8080/NewsApp-war/ProductCodeWS.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/NewsApp-war/ProductWS?WSDL" uri="src/Productos/localhost_8080/NewsApp-war/ProductWS.wsdl"/>
+    <system systemId="http://localhost:8080/NewsApp-war/ProductWS?xsd=1" uri="src/Productos/localhost_8080/NewsApp-war/ProductWS.xsd_1.xsd"/>
+</catalog>
