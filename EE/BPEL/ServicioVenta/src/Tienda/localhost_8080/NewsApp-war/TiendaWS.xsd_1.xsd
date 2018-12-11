@@ -4,33 +4,49 @@
 
 <xs:element name="count_MNFResponse" type="tns:count_MNFResponse"/>
 
+<xs:element name="count_PC" type="tns:count_PC"/>
+
+<xs:element name="count_PCResponse" type="tns:count_PCResponse"/>
+
 <xs:element name="count_PROD" type="tns:count_PROD"/>
 
 <xs:element name="count_PRODResponse" type="tns:count_PRODResponse"/>
 
 <xs:element name="create_MNF" type="tns:create_MNF"/>
 
+<xs:element name="create_PC" type="tns:create_PC"/>
+
 <xs:element name="create_PROD" type="tns:create_PROD"/>
 
 <xs:element name="edit_MNF" type="tns:edit_MNF"/>
 
+<xs:element name="edit_PC" type="tns:edit_PC"/>
+
 <xs:element name="edit_PROD" type="tns:edit_PROD"/>
+
+<xs:element name="fetch" type="tns:fetch"/>
+
+<xs:element name="fetchResponse" type="tns:fetchResponse"/>
 
 <xs:element name="findAll_MNF" type="tns:findAll_MNF"/>
 
 <xs:element name="findAll_MNFResponse" type="tns:findAll_MNFResponse"/>
 
+<xs:element name="findAll_PC" type="tns:findAll_PC"/>
+
+<xs:element name="findAll_PCResponse" type="tns:findAll_PCResponse"/>
+
 <xs:element name="findAll_PROD" type="tns:findAll_PROD"/>
 
 <xs:element name="findAll_PRODResponse" type="tns:findAll_PRODResponse"/>
 
-<xs:element name="findProdByName" type="tns:findProdByName"/>
-
-<xs:element name="findProdByNameResponse" type="tns:findProdByNameResponse"/>
-
 <xs:element name="findRange_MNF" type="tns:findRange_MNF"/>
 
 <xs:element name="findRange_MNFResponse" type="tns:findRange_MNFResponse"/>
+
+<xs:element name="findRange_PC" type="tns:findRange_PC"/>
+
+<xs:element name="findRange_PCResponse" type="tns:findRange_PCResponse"/>
 
 <xs:element name="findRange_PROD" type="tns:findRange_PROD"/>
 
@@ -39,6 +55,10 @@
 <xs:element name="find_MNF" type="tns:find_MNF"/>
 
 <xs:element name="find_MNFResponse" type="tns:find_MNFResponse"/>
+
+<xs:element name="find_PC" type="tns:find_PC"/>
+
+<xs:element name="find_PCResponse" type="tns:find_PCResponse"/>
 
 <xs:element name="find_PROD" type="tns:find_PROD"/>
 
@@ -51,6 +71,8 @@
 <xs:element name="productCode" type="tns:productCode"/>
 
 <xs:element name="remove_MNF" type="tns:remove_MNF"/>
+
+<xs:element name="remove_PC" type="tns:remove_PC"/>
 
 <xs:element name="remove_PROD" type="tns:remove_PROD"/>
 
@@ -115,6 +137,18 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="findRange_PC">
+<xs:sequence>
+<xs:element name="range" type="xs:int" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findRange_PCResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:productCode" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="remove_PROD">
 <xs:sequence>
 <xs:element name="entity" type="tns:product" minOccurs="0"/>
@@ -137,15 +171,43 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="findProdByName">
+<xs:complexType name="remove_PC">
 <xs:sequence>
-<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="entity" type="tns:productCode" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="findProdByNameResponse">
+<xs:complexType name="findAll_PC">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAll_PCResponse">
 <xs:sequence>
-<xs:element name="return" type="tns:product" minOccurs="0"/>
+<xs:element name="return" type="tns:productCode" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="edit_PC">
+<xs:sequence>
+<xs:element name="entity" type="tns:productCode" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="create_PC">
+<xs:sequence>
+<xs:element name="entity" type="tns:productCode" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="find_PC">
+<xs:sequence>
+<xs:element name="id" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="find_PCResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:productCode" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -205,6 +267,19 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="fetch">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="qty" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="findAll_MNF">
 <xs:sequence/>
 </xs:complexType>
@@ -218,6 +293,16 @@
 <xs:complexType name="remove_MNF">
 <xs:sequence>
 <xs:element name="entity" type="tns:manufacturer" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="count_PC">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="count_PCResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
 </xs:sequence>
 </xs:complexType>
 

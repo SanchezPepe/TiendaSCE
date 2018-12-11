@@ -4,11 +4,44 @@
 <xsd:import namespace="http://web/" schemaLocation="http://localhost:8080/NewsApp-war/TiendaWS?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="remove_MNF">
-<part name="parameters" element="tns:remove_MNF"/>
+<message name="create_PC">
+<part name="parameters" element="tns:create_PC"/>
 </message>
-<message name="edit_MNF">
-<part name="parameters" element="tns:edit_MNF"/>
+<message name="edit_PC">
+<part name="parameters" element="tns:edit_PC"/>
+</message>
+<message name="remove_PC">
+<part name="parameters" element="tns:remove_PC"/>
+</message>
+<message name="create_PROD">
+<part name="parameters" element="tns:create_PROD"/>
+</message>
+<message name="find_PC">
+<part name="parameters" element="tns:find_PC"/>
+</message>
+<message name="find_PCResponse">
+<part name="parameters" element="tns:find_PCResponse"/>
+</message>
+<message name="findAll_PC">
+<part name="parameters" element="tns:findAll_PC"/>
+</message>
+<message name="findAll_PCResponse">
+<part name="parameters" element="tns:findAll_PCResponse"/>
+</message>
+<message name="findRange_PC">
+<part name="parameters" element="tns:findRange_PC"/>
+</message>
+<message name="findRange_PCResponse">
+<part name="parameters" element="tns:findRange_PCResponse"/>
+</message>
+<message name="count_PC">
+<part name="parameters" element="tns:count_PC"/>
+</message>
+<message name="count_PCResponse">
+<part name="parameters" element="tns:count_PCResponse"/>
+</message>
+<message name="create_MNF">
+<part name="parameters" element="tns:create_MNF"/>
 </message>
 <message name="findAll_MNF">
 <part name="parameters" element="tns:findAll_MNF"/>
@@ -16,26 +49,23 @@
 <message name="findAll_MNFResponse">
 <part name="parameters" element="tns:findAll_MNFResponse"/>
 </message>
-<message name="find_MNF">
-<part name="parameters" element="tns:find_MNF"/>
+<message name="count_MNF">
+<part name="parameters" element="tns:count_MNF"/>
 </message>
-<message name="find_MNFResponse">
-<part name="parameters" element="tns:find_MNFResponse"/>
+<message name="count_MNFResponse">
+<part name="parameters" element="tns:count_MNFResponse"/>
 </message>
-<message name="create_MNF">
-<part name="parameters" element="tns:create_MNF"/>
+<message name="edit_MNF">
+<part name="parameters" element="tns:edit_MNF"/>
+</message>
+<message name="remove_MNF">
+<part name="parameters" element="tns:remove_MNF"/>
 </message>
 <message name="findRange_MNF">
 <part name="parameters" element="tns:findRange_MNF"/>
 </message>
 <message name="findRange_MNFResponse">
 <part name="parameters" element="tns:findRange_MNFResponse"/>
-</message>
-<message name="count_MNF">
-<part name="parameters" element="tns:count_MNF"/>
-</message>
-<message name="count_MNFResponse">
-<part name="parameters" element="tns:count_MNFResponse"/>
 </message>
 <message name="edit_PROD">
 <part name="parameters" element="tns:edit_PROD"/>
@@ -49,20 +79,11 @@
 <message name="find_PRODResponse">
 <part name="parameters" element="tns:find_PRODResponse"/>
 </message>
-<message name="count_PROD">
-<part name="parameters" element="tns:count_PROD"/>
-</message>
-<message name="count_PRODResponse">
-<part name="parameters" element="tns:count_PRODResponse"/>
-</message>
 <message name="findAll_PROD">
 <part name="parameters" element="tns:findAll_PROD"/>
 </message>
 <message name="findAll_PRODResponse">
 <part name="parameters" element="tns:findAll_PRODResponse"/>
-</message>
-<message name="create_PROD">
-<part name="parameters" element="tns:create_PROD"/>
 </message>
 <message name="findRange_PROD">
 <part name="parameters" element="tns:findRange_PROD"/>
@@ -70,37 +91,73 @@
 <message name="findRange_PRODResponse">
 <part name="parameters" element="tns:findRange_PRODResponse"/>
 </message>
-<message name="findProdByName">
-<part name="parameters" element="tns:findProdByName"/>
+<message name="count_PROD">
+<part name="parameters" element="tns:count_PROD"/>
 </message>
-<message name="findProdByNameResponse">
-<part name="parameters" element="tns:findProdByNameResponse"/>
+<message name="count_PRODResponse">
+<part name="parameters" element="tns:count_PRODResponse"/>
+</message>
+<message name="find_MNF">
+<part name="parameters" element="tns:find_MNF"/>
+</message>
+<message name="find_MNFResponse">
+<part name="parameters" element="tns:find_MNFResponse"/>
+</message>
+<message name="fetch">
+<part name="parameters" element="tns:fetch"/>
+</message>
+<message name="fetchResponse">
+<part name="parameters" element="tns:fetchResponse"/>
 </message>
 <portType name="TiendaWS">
-<operation name="remove_MNF">
-<input wsam:Action="http://web/TiendaWS/remove_MNF" message="tns:remove_MNF"/>
+<operation name="create_PC">
+<input wsam:Action="http://web/TiendaWS/create_PC" message="tns:create_PC"/>
 </operation>
-<operation name="edit_MNF">
-<input wsam:Action="http://web/TiendaWS/edit_MNF" message="tns:edit_MNF"/>
+<operation name="edit_PC">
+<input wsam:Action="http://web/TiendaWS/edit_PC" message="tns:edit_PC"/>
+</operation>
+<operation name="remove_PC">
+<input wsam:Action="http://web/TiendaWS/remove_PC" message="tns:remove_PC"/>
+</operation>
+<operation name="create_PROD">
+<input wsam:Action="http://web/TiendaWS/create_PROD" message="tns:create_PROD"/>
+</operation>
+<operation name="find_PC">
+<input wsam:Action="http://web/TiendaWS/find_PCRequest" message="tns:find_PC"/>
+<output wsam:Action="http://web/TiendaWS/find_PCResponse" message="tns:find_PCResponse"/>
+</operation>
+<operation name="findAll_PC">
+<input wsam:Action="http://web/TiendaWS/findAll_PCRequest" message="tns:findAll_PC"/>
+<output wsam:Action="http://web/TiendaWS/findAll_PCResponse" message="tns:findAll_PCResponse"/>
+</operation>
+<operation name="findRange_PC">
+<input wsam:Action="http://web/TiendaWS/findRange_PCRequest" message="tns:findRange_PC"/>
+<output wsam:Action="http://web/TiendaWS/findRange_PCResponse" message="tns:findRange_PCResponse"/>
+</operation>
+<operation name="count_PC">
+<input wsam:Action="http://web/TiendaWS/count_PCRequest" message="tns:count_PC"/>
+<output wsam:Action="http://web/TiendaWS/count_PCResponse" message="tns:count_PCResponse"/>
+</operation>
+<operation name="create_MNF">
+<input wsam:Action="http://web/TiendaWS/create_MNF" message="tns:create_MNF"/>
 </operation>
 <operation name="findAll_MNF">
 <input wsam:Action="http://web/TiendaWS/findAll_MNFRequest" message="tns:findAll_MNF"/>
 <output wsam:Action="http://web/TiendaWS/findAll_MNFResponse" message="tns:findAll_MNFResponse"/>
 </operation>
-<operation name="find_MNF">
-<input wsam:Action="http://web/TiendaWS/find_MNFRequest" message="tns:find_MNF"/>
-<output wsam:Action="http://web/TiendaWS/find_MNFResponse" message="tns:find_MNFResponse"/>
+<operation name="count_MNF">
+<input wsam:Action="http://web/TiendaWS/count_MNFRequest" message="tns:count_MNF"/>
+<output wsam:Action="http://web/TiendaWS/count_MNFResponse" message="tns:count_MNFResponse"/>
 </operation>
-<operation name="create_MNF">
-<input wsam:Action="http://web/TiendaWS/create_MNF" message="tns:create_MNF"/>
+<operation name="edit_MNF">
+<input wsam:Action="http://web/TiendaWS/edit_MNF" message="tns:edit_MNF"/>
+</operation>
+<operation name="remove_MNF">
+<input wsam:Action="http://web/TiendaWS/remove_MNF" message="tns:remove_MNF"/>
 </operation>
 <operation name="findRange_MNF">
 <input wsam:Action="http://web/TiendaWS/findRange_MNFRequest" message="tns:findRange_MNF"/>
 <output wsam:Action="http://web/TiendaWS/findRange_MNFResponse" message="tns:findRange_MNFResponse"/>
-</operation>
-<operation name="count_MNF">
-<input wsam:Action="http://web/TiendaWS/count_MNFRequest" message="tns:count_MNF"/>
-<output wsam:Action="http://web/TiendaWS/count_MNFResponse" message="tns:count_MNFResponse"/>
 </operation>
 <operation name="edit_PROD">
 <input wsam:Action="http://web/TiendaWS/edit_PROD" message="tns:edit_PROD"/>
@@ -112,41 +169,54 @@
 <input wsam:Action="http://web/TiendaWS/find_PRODRequest" message="tns:find_PROD"/>
 <output wsam:Action="http://web/TiendaWS/find_PRODResponse" message="tns:find_PRODResponse"/>
 </operation>
-<operation name="count_PROD">
-<input wsam:Action="http://web/TiendaWS/count_PRODRequest" message="tns:count_PROD"/>
-<output wsam:Action="http://web/TiendaWS/count_PRODResponse" message="tns:count_PRODResponse"/>
-</operation>
 <operation name="findAll_PROD">
 <input wsam:Action="http://web/TiendaWS/findAll_PRODRequest" message="tns:findAll_PROD"/>
 <output wsam:Action="http://web/TiendaWS/findAll_PRODResponse" message="tns:findAll_PRODResponse"/>
-</operation>
-<operation name="create_PROD">
-<input wsam:Action="http://web/TiendaWS/create_PROD" message="tns:create_PROD"/>
 </operation>
 <operation name="findRange_PROD">
 <input wsam:Action="http://web/TiendaWS/findRange_PRODRequest" message="tns:findRange_PROD"/>
 <output wsam:Action="http://web/TiendaWS/findRange_PRODResponse" message="tns:findRange_PRODResponse"/>
 </operation>
-<operation name="findProdByName">
-<input wsam:Action="http://web/TiendaWS/findProdByNameRequest" message="tns:findProdByName"/>
-<output wsam:Action="http://web/TiendaWS/findProdByNameResponse" message="tns:findProdByNameResponse"/>
+<operation name="count_PROD">
+<input wsam:Action="http://web/TiendaWS/count_PRODRequest" message="tns:count_PROD"/>
+<output wsam:Action="http://web/TiendaWS/count_PRODResponse" message="tns:count_PRODResponse"/>
+</operation>
+<operation name="find_MNF">
+<input wsam:Action="http://web/TiendaWS/find_MNFRequest" message="tns:find_MNF"/>
+<output wsam:Action="http://web/TiendaWS/find_MNFResponse" message="tns:find_MNFResponse"/>
+</operation>
+<operation name="fetch">
+<input wsam:Action="http://web/TiendaWS/fetchRequest" message="tns:fetch"/>
+<output wsam:Action="http://web/TiendaWS/fetchResponse" message="tns:fetchResponse"/>
 </operation>
 </portType>
 <binding name="TiendaWSPortBinding" type="tns:TiendaWS">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="remove_MNF">
+<operation name="create_PC">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
 </input>
 </operation>
-<operation name="edit_MNF">
+<operation name="edit_PC">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
 </input>
 </operation>
-<operation name="findAll_MNF">
+<operation name="remove_PC">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+</operation>
+<operation name="create_PROD">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+</operation>
+<operation name="find_PC">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -155,7 +225,25 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="find_MNF">
+<operation name="findAll_PC">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="findRange_PC">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="count_PC">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -170,7 +258,7 @@
 <soap:body use="literal"/>
 </input>
 </operation>
-<operation name="findRange_MNF">
+<operation name="findAll_MNF">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -180,6 +268,27 @@
 </output>
 </operation>
 <operation name="count_MNF">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="edit_MNF">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+</operation>
+<operation name="remove_MNF">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+</operation>
+<operation name="findRange_MNF">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -209,15 +318,6 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="count_PROD">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
 <operation name="findAll_PROD">
 <soap:operation soapAction=""/>
 <input>
@@ -226,12 +326,6 @@
 <output>
 <soap:body use="literal"/>
 </output>
-</operation>
-<operation name="create_PROD">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
 </operation>
 <operation name="findRange_PROD">
 <soap:operation soapAction=""/>
@@ -242,7 +336,25 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="findProdByName">
+<operation name="count_PROD">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="find_MNF">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="fetch">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

@@ -22,6 +22,9 @@
         <partnerLink name="VentaProductos" xmlns:tns="http://j2ee.netbeans.org/wsdl/ServicioVenta/DescriptorBPEL/VentaWSDL" partnerLinkType="tns:VentaWSDL" myRole="VentaWSDLPortTypeRole"/>
     </partnerLinks>
     <variables>
+        <variable name="VentaWSDLOperationOut1" xmlns:tns="http://j2ee.netbeans.org/wsdl/ServicioVenta/DescriptorBPEL/VentaWSDL" messageType="tns:VentaWSDLOperationResponse"/>
+        <variable name="FetchOut" xmlns:tns="http://web/" messageType="tns:fetchResponse"/>
+        <variable name="FetchIn" xmlns:tns="http://web/" messageType="tns:fetch"/>
         <variable name="FindProdByNameOut" xmlns:tns="http://web/" messageType="tns:findProdByNameResponse"/>
         <variable name="FindProdByNameIn" xmlns:tns="http://web/" messageType="tns:findProdByName"/>
         <variable name="VentaWSDLOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/ServicioVenta/DescriptorBPEL/VentaWSDL" messageType="tns:VentaWSDLOperationResponse"/>
@@ -32,10 +35,20 @@
         <assign name="Assign1">
             <copy>
                 <from variable="VentaWSDLOperationIn" part="producto"/>
-                <to>$FindProdByNameIn.parameters/name</to>
+                <to>$FetchIn.parameters/name</to>
+            </copy>
+            <copy>
+                <from variable="VentaWSDLOperationIn" part="cantidad"/>
+                <to>$FetchIn.parameters/qty</to>
             </copy>
         </assign>
-        <invoke name="Stock" partnerLink="Tienda" operation="findProdByName" xmlns:tns="http://web/" portType="tns:TiendaWS" inputVariable="FindProdByNameIn" outputVariable="FindProdByNameOut"/>
+        <invoke name="Stock" partnerLink="Tienda" operation="fetch" xmlns:tns="http://web/" portType="tns:TiendaWS" inputVariable="FetchIn" outputVariable="FetchOut"/>
+        <assign name="Ans">
+            <copy>
+                <from>$FetchOut.parameters/return</from>
+                <to variable="FetchIn" part="parameters"/>
+            </copy>
+        </assign>
         <reply name="RespuestaOK" partnerLink="VentaProductos" operation="VentaWSDLOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/ServicioVenta/DescriptorBPEL/VentaWSDL" portType="tns:VentaWSDLPortType" variable="VentaWSDLOperationOut"/>
     </sequence>
 </process>

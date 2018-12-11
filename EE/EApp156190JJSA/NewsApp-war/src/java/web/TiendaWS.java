@@ -110,8 +110,8 @@ public class TiendaWS {
         return ejbProd.count();
     }
     
-    @WebMethod(operationName = "findProdByName")
-    public Product findProdByName(@WebParam(name = "name") String s) {
+    @WebMethod(operationName = "fetch")
+    public boolean fetch(@WebParam(name = "name") String s, @WebParam(name = "qty") int qty) {
         List<Product> lista = findAll_PROD();
         Product p = null;
         boolean find = false;
@@ -122,7 +122,10 @@ public class TiendaWS {
                 find = true;
             i++;
         }
-        return p;
+        if(find && p.getQuantityOnHand() >= qty)
+            return true;
+        else
+            return false;
     }
     
     //=========================PRODUCT CODE============================================== 

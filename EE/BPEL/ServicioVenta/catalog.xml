@@ -6,7 +6,7 @@
     <system systemId="http://localhost:8080/NewsApp-war/ProductCodeWS?xsd=1" uri="src/Productos/localhost_8080/NewsApp-war/ProductCodeWS.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/NewsApp-war/ProductWS?WSDL" uri="src/Productos/localhost_8080/NewsApp-war/ProductWS.wsdl"/>
     <system systemId="http://localhost:8080/NewsApp-war/ProductWS?xsd=1" uri="src/Productos/localhost_8080/NewsApp-war/ProductWS.xsd_1.xsd"/>
-    <nextCatalog catalog="nbproject/private/retriever/catalog.xml"/>
     <system systemId="http://localhost:8080/NewsApp-war/TiendaWS?WSDL" uri="src/Tienda/localhost_8080/NewsApp-war/TiendaWS.wsdl"/>
     <system systemId="http://localhost:8080/NewsApp-war/TiendaWS?xsd=1" uri="src/Tienda/localhost_8080/NewsApp-war/TiendaWS.xsd_1.xsd"/>
+    <nextCatalog catalog="nbproject/private/retriever/catalog.xml"/>
 </catalog>
