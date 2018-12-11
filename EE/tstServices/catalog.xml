@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/NewsApp-war/ManufacturerWS?WSDL" uri="xml-resources/web-service-references/ManufacturerWS/wsdl/localhost_8080/NewsApp-war/ManufacturerWS.wsdl"/>
+    <system systemId="http://localhost:8080/NewsApp-war/ManufacturerWS?xsd=1" uri="xml-resources/web-service-references/ManufacturerWS/wsdl/localhost_8080/NewsApp-war/ManufacturerWS.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/NewsApp-war/ProductWS?WSDL" uri="xml-resources/web-service-references/ProductWS/wsdl/localhost_8080/NewsApp-war/ProductWS.wsdl"/>
+    <system systemId="http://localhost:8080/NewsApp-war/ProductWS?xsd=1" uri="xml-resources/web-service-references/ProductWS/wsdl/localhost_8080/NewsApp-war/ProductWS.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/NewsApp-war/ProductCodeWS?WSDL" uri="xml-resources/web-service-references/ProductCodeWS/wsdl/localhost_8080/NewsApp-war/ProductCodeWS.wsdl"/>
+    <system systemId="http://localhost:8080/NewsApp-war/ProductCodeWS?xsd=1" uri="xml-resources/web-service-references/ProductCodeWS/wsdl/localhost_8080/NewsApp-war/ProductCodeWS.xsd_1.xsd"/>
+</catalog>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
-    <system systemId="http://148.205.133.200:8080/NewsApp-war/NoticiasWS?wsdl" uri="wsdl/148.205.133.200_8080/NewsApp-war/NoticiasWS.wsdl"/>
-    <system systemId="http://148.205.133.200:8080/NewsApp-war/NoticiasWS?xsd=1" uri="wsdl/148.205.133.200_8080/NewsApp-war/NoticiasWS.xsd_1.xsd"/>
-</catalog>

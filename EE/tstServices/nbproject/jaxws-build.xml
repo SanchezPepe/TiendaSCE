@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-ManufacturerWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ManufacturerWS"/>
+        <property name="wsdl-ManufacturerWS" location="xml-resources/web-service-references/ManufacturerWS/wsdl/localhost_8080/NewsApp-war/ManufacturerWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ManufacturerWS" destdir="${build.generated.dir}/jax-wsCache/ManufacturerWS" wsdl="${wsdl-ManufacturerWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/NewsApp-war/ManufacturerWS?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-ManufacturerWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ManufacturerWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ManufacturerWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ManufacturerWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ManufacturerWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/web"/>
+    </target>
+    <target name="wsimport-client-ProductWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ProductWS"/>
+        <property name="wsdl-ProductWS" location="xml-resources/web-service-references/ProductWS/wsdl/localhost_8080/NewsApp-war/ProductWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ProductWS" destdir="${build.generated.dir}/jax-wsCache/ProductWS" wsdl="${wsdl-ProductWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/NewsApp-war/ProductWS?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-ProductWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ProductWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ProductWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ProductWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ProductWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/web"/>
+    </target>
+    <target name="wsimport-client-ProductCodeWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ProductCodeWS"/>
+        <property name="wsdl-ProductCodeWS" location="xml-resources/web-service-references/ProductCodeWS/wsdl/localhost_8080/NewsApp-war/ProductCodeWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ProductCodeWS" destdir="${build.generated.dir}/jax-wsCache/ProductCodeWS" wsdl="${wsdl-ProductCodeWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/NewsApp-war/ProductCodeWS?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-ProductCodeWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ProductCodeWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ProductCodeWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ProductCodeWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ProductCodeWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/web"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-ManufacturerWS, wsimport-client-ProductWS, wsimport-client-ProductCodeWS"/>
+</project>
