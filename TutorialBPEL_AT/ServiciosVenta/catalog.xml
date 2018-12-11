@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:13857/PagoOnline/PasarelaPagoService?wsdl" uri="src/S_Pago/localhost_13857/PagoOnline/PasarelaPagoService.wsdl"/>
+    <system systemId="http://localhost:13857/PagoOnline/PasarelaPagoService?xsd=1" uri="src/S_Pago/localhost_13857/PagoOnline/PasarelaPagoService.xsd_1.xsd"/>
+    <system systemId="http://localhost:13857/TiendaElectronica/AlmacenService?wsdl" uri="src/S_Almacen/localhost_13857/TiendaElectronica/AlmacenService.wsdl"/>
+    <system systemId="http://localhost:13857/TiendaElectronica/AlmacenService?xsd=1" uri="src/S_Almacen/localhost_13857/TiendaElectronica/AlmacenService.xsd_1.xsd"/>
+    <nextCatalog catalog="nbproject/private/retriever/catalog.xml"/>
+</catalog>
