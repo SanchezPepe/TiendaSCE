@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://web/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://web/">
+
+<xs:element name="count_MNF" type="tns:count_MNF"/>
+
+<xs:element name="count_MNFResponse" type="tns:count_MNFResponse"/>
+
+<xs:element name="count_PROD" type="tns:count_PROD"/>
+
+<xs:element name="count_PRODResponse" type="tns:count_PRODResponse"/>
+
+<xs:element name="create_MNF" type="tns:create_MNF"/>
+
+<xs:element name="create_PROD" type="tns:create_PROD"/>
+
+<xs:element name="edit_MNF" type="tns:edit_MNF"/>
+
+<xs:element name="edit_PROD" type="tns:edit_PROD"/>
+
+<xs:element name="findAll_MNF" type="tns:findAll_MNF"/>
+
+<xs:element name="findAll_MNFResponse" type="tns:findAll_MNFResponse"/>
+
+<xs:element name="findAll_PROD" type="tns:findAll_PROD"/>
+
+<xs:element name="findAll_PRODResponse" type="tns:findAll_PRODResponse"/>
+
+<xs:element name="findProdByName" type="tns:findProdByName"/>
+
+<xs:element name="findProdByNameResponse" type="tns:findProdByNameResponse"/>
+
+<xs:element name="findRange_MNF" type="tns:findRange_MNF"/>
+
+<xs:element name="findRange_MNFResponse" type="tns:findRange_MNFResponse"/>
+
+<xs:element name="findRange_PROD" type="tns:findRange_PROD"/>
+
+<xs:element name="findRange_PRODResponse" type="tns:findRange_PRODResponse"/>
+
+<xs:element name="find_MNF" type="tns:find_MNF"/>
+
+<xs:element name="find_MNFResponse" type="tns:find_MNFResponse"/>
+
+<xs:element name="find_PROD" type="tns:find_PROD"/>
+
+<xs:element name="find_PRODResponse" type="tns:find_PRODResponse"/>
+
+<xs:element name="manufacturer" type="tns:manufacturer"/>
+
+<xs:element name="product" type="tns:product"/>
+
+<xs:element name="productCode" type="tns:productCode"/>
+
+<xs:element name="remove_MNF" type="tns:remove_MNF"/>
+
+<xs:element name="remove_PROD" type="tns:remove_PROD"/>
+
+<xs:complexType name="find_PROD">
+<xs:sequence>
+<xs:element name="id" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="find_PRODResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:product" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="product">
+<xs:sequence>
+<xs:element name="available" type="xs:string" minOccurs="0"/>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+<xs:element name="manufacturerId" type="tns:manufacturer" minOccurs="0"/>
+<xs:element name="markup" type="xs:decimal" minOccurs="0"/>
+<xs:element name="productCode" type="tns:productCode" minOccurs="0"/>
+<xs:element name="productId" type="xs:int" minOccurs="0"/>
+<xs:element name="purchaseCost" type="xs:decimal" minOccurs="0"/>
+<xs:element name="quantityOnHand" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="manufacturer">
+<xs:sequence>
+<xs:element name="addressline1" type="xs:string" minOccurs="0"/>
+<xs:element name="addressline2" type="xs:string" minOccurs="0"/>
+<xs:element name="city" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="fax" type="xs:string" minOccurs="0"/>
+<xs:element name="manufacturerId" type="xs:int" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="phone" type="xs:string" minOccurs="0"/>
+<xs:element name="rep" type="xs:string" minOccurs="0"/>
+<xs:element name="state" type="xs:string" minOccurs="0"/>
+<xs:element name="zip" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="productCode">
+<xs:sequence>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+<xs:element name="discountCode" type="xs:unsignedShort" minOccurs="0"/>
+<xs:element name="prodCode" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findRange_PROD">
+<xs:sequence>
+<xs:element name="range" type="xs:int" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findRange_PRODResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:product" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="remove_PROD">
+<xs:sequence>
+<xs:element name="entity" type="tns:product" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="create_MNF">
+<xs:sequence>
+<xs:element name="entity" type="tns:manufacturer" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="count_MNF">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="count_MNFResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findProdByName">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findProdByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:product" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findRange_MNF">
+<xs:sequence>
+<xs:element name="range" type="xs:int" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findRange_MNFResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:manufacturer" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="edit_PROD">
+<xs:sequence>
+<xs:element name="entity" type="tns:product" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="count_PROD">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="count_PRODResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="create_PROD">
+<xs:sequence>
+<xs:element name="entity" type="tns:product" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAll_PROD">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAll_PRODResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:product" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="find_MNF">
+<xs:sequence>
+<xs:element name="id" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="find_MNFResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:manufacturer" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAll_MNF">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAll_MNFResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:manufacturer" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="remove_MNF">
+<xs:sequence>
+<xs:element name="entity" type="tns:manufacturer" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="edit_MNF">
+<xs:sequence>
+<xs:element name="entity" type="tns:manufacturer" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -110,6 +110,21 @@ public class TiendaWS {
         return ejbProd.count();
     }
     
+    @WebMethod(operationName = "findProdByName")
+    public Product findProdByName(@WebParam(name = "name") String s) {
+        List<Product> lista = findAll_PROD();
+        Product p = null;
+        boolean find = false;
+        int i = 0;
+        while(!find || i < 6){
+            p = lista.get(1);
+            if(p.getDescription().equals(s))
+                find = true;
+            i++;
+        }
+        return p;
+    }
+    
     //=========================PRODUCT CODE============================================== 
     
     @WebMethod(operationName = "create_PC")
