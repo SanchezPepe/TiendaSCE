@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:9090/WSEnvios/WSEnvios?WSDL" uri="localhost_9090/WSEnvios/WSEnvios.wsdl"/>
+    <system systemId="http://localhost:9090/WSEnvios/WSEnvios?xsd=1" uri="localhost_9090/WSEnvios/WSEnvios.xsd_1.xsd"/>
+    <system systemId="http://localhost:9090/WSOrdenCompra/WSOrdenCompra?WSDL" uri="localhost_9090/WSOrdenCompra/WSOrdenCompra.wsdl"/>
+    <system systemId="http://localhost:9090/WSOrdenCompra/WSOrdenCompra?xsd=1" uri="localhost_9090/WSOrdenCompra/WSOrdenCompra.xsd_1.xsd"/>
+    <system systemId="http://localhost:9090/WSPagos/WSPagos?WSDL" uri="localhost_9090/WSPagos/WSPagos.wsdl"/>
+    <system systemId="http://localhost:9090/WSPagos/WSPagos?xsd=1" uri="localhost_9090/WSPagos/WSPagos.xsd_1.xsd"/>
+    <system systemId="http://localhost:9090/WSAlmacen/WSAlmacen?WSDL" uri="localhost_9090/WSAlmacen/WSAlmacen.wsdl"/>
+    <system systemId="http://localhost:9090/WSAlmacen/WSAlmacen?xsd=1" uri="localhost_9090/WSAlmacen/WSAlmacen.xsd_1.xsd"/>
+    <system systemId="http://23.96.101.51:8080/WSEnvios/WSEnvios?WSDL" uri="23.96.101.51_8080/WSEnvios/WSEnvios.wsdl"/>
+    <system systemId="http://23.96.101.51:8080/WSEnvios/WSEnvios?xsd=1" uri="23.96.101.51_8080/WSEnvios/WSEnvios.xsd_1.xsd"/>
+</catalog>
